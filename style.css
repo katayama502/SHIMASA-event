@@ -1,0 +1,343 @@
+/* Global Variables & Reset */
+:root {
+  /* Colors - Miyabi & Fuku Theme */
+  --color-primary: #B22222; /* Crimson Red - Fortune/Ward off evil */
+  --color-gold: #D4AF37; /* Gold - Wealth/Prosperity */
+  --color-text-main: #1A1A1A; /* Black/Dark Gray */
+  --color-text-light: #F5F5F5;
+  --color-bg-body: #FAFAFA;
+  --color-bg-section: #FFFFFF;
+  --color-bg-accent: #FFF8E7; /* Light Beige */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+
+  /* Typography */
+  --font-mincho: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+  --font-gothic: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  
+  --width-max: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-gothic);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-body);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  max-width: var(--width-max);
+  margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.text-gold { color: var(--color-gold); }
+.text-primary { color: var(--color-primary); }
+
+.mincho { font-family: var(--font-mincho); }
+
+/* Header */
+.site-header {
+  background-color: #fff;
+  padding: var(--spacing-sm) 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: var(--font-mincho);
+}
+
+.btn-header {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* Placeholder for bg image */
+}
+
+.hero-title {
+  font-family: var(--font-mincho);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.1em;
+}
+
+.hero-tag {
+  display: inline-block;
+  background: var(--color-gold);
+  color: #000;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  border-radius: 2px;
+  font-family: var(--font-mincho);
+}
+
+/* Section Common */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+  font-family: var(--font-mincho);
+  font-size: 2rem;
+  color: var(--color-primary);
+  display: inline-block;
+  border-bottom: 3px solid var(--color-gold); /* Underline style */
+  padding-bottom: 0.5rem;
+}
+
+.section-desc {
+  margin-top: var(--spacing-sm);
+}
+
+/* Concept Section */
+.concept {
+  background-color: var(--color-bg-accent);
+}
+
+.concept-text {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Menu/Lineup Section */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  background-color: #ddd; /* Placeholder */
+  object-fit: cover;
+}
+
+.product-info {
+  padding: var(--spacing-md);
+}
+
+.product-badge {
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: var(--spacing-xs);
+  display: inline-block;
+}
+
+.product-title {
+  font-family: var(--font-mincho);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-xs);
+  border-bottom: 1px solid #eee;
+  padding-bottom: var(--spacing-xs);
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.product-desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: var(--spacing-sm);
+}
+
+.product-allergy {
+  font-size: 0.8rem;
+  color: #888;
+  border-top: 1px dotted #ccc;
+  padding-top: var(--spacing-xs);
+}
+
+/* How to Order */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  counter-reset: step;
+}
+
+.step-item {
+  background: #fff;
+  padding: var(--spacing-md);
+  text-align: center;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+.step-item::before {
+  counter-increment: step;
+  content: counter(step);
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: var(--color-gold);
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-sm);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Shop Info */
+.shop-info {
+  background: var(--color-text-main);
+  color: #fff;
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.shop-details h3 {
+  font-family: var(--font-mincho);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gold);
+}
+
+.shop-map {
+  width: 100%;
+  height: 300px;
+  background-color: #333; /* Placeholder */
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #888;
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* Fixed CTA on Mobile */
+.fixed-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .shop-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .fixed-cta {
+    display: block;
+  }
+  
+  .site-header {
+    display: none; /* Hide top header on mobile if we have fixed CTA, or adjust */
+  }
+}
