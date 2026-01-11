@@ -235,6 +235,21 @@ a:hover {
   padding-top: var(--spacing-xs);
 }
 
+.product-ingredients {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
+  border-top: 1px dashed #ddd;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #444; 
+}
+
+.ingredients-label {
+  font-weight: bold;
+  color: var(--color-primary);
+  margin-right: 0.5rem;
+}
+
 /* How to Order */
 .steps {
   display: grid;
