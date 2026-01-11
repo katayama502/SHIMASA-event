@@ -105,7 +105,9 @@ a:hover {
   text-align: center;
   padding: var(--spacing-xl) 0;
   overflow: hidden;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)); /* Placeholder for bg image */
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/top.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -214,7 +216,7 @@ a:hover {
 }
 
 .product-price {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: bold;
   color: var(--color-primary);
   margin-bottom: var(--spacing-sm);
