@@ -33,7 +33,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <h1 class="logo">寿司正</h1>
-            <a href="#order" class="btn-header">ご予約はこちら</a>
+            <a href="#" class="btn-header btn-disabled">ご予約受付終了</a>
         </div>
     </header>
 
@@ -43,6 +43,11 @@
             <p class="hero-subtitle text-white">福を巻き込む、至福の一本。</p>
             <h2 class="hero-title">2026年<br>恵方巻き</h2>
             <div class="hero-tag">2月3日(火) 節分</div>
+            <br>
+            <div class="hero-closed-overlay">
+                2026年のご予約受付は<br>終了いたしました
+                <a href="https://sushimasa.net/" class="btn-main-site">寿司正 公式サイトへ</a>
+            </div>
         </div>
     </section>
 
@@ -136,10 +141,19 @@
         <div class="container">
             <div class="section-header">
                 <h3 class="section-title">ご予約方法</h3>
-                <p class="section-desc">お電話または店頭にて承っております。</p>
+                <p class="section-desc">本年のご予約受付は終了いたしました。</p>
             </div>
 
-            <div class="steps">
+            <div class="notice-closed">
+                2026年恵方巻きのご予約受付は終了いたしました。<br>
+                たくさんのご予約、誠にありがとうございました。<br>
+                <span style="font-size:0.9rem; font-weight:normal; display:block; margin-top:0.5rem;">当日販売については、店舗までお問い合わせください。</span>
+                <div style="margin-top:1rem;">
+                    <a href="https://sushimasa.net/" style="color:var(--color-primary); text-decoration:underline; font-weight:bold;">寿司正 公式サイトはこちら</a>
+                </div>
+            </div>
+            
+            <div class="steps" style="opacity: 0.5; pointer-events: none; filter: grayscale(1);">
                 <div class="step-item">
                     <h4 class="step-title">1. 商品を選ぶ</h4>
                     <p>お品書きから、お好みの恵方巻きをお選びください。</p>
@@ -155,10 +169,15 @@
             </div>
             
             <div class="text-center" style="margin-top: var(--spacing-lg);">
-                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ご予約締切: 1月31日(土)まで</p>
-                <a href="tel:053-441-3496" style="display:inline-block; background:var(--color-primary); color:#fff; padding: 1rem 3rem; border-radius: 50px; font-weight:bold; font-size:1.2rem;">
-                    電話で予約する
-                </a>
+                <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem;">ご予約受付は終了いたしました</p>
+                <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+                    <span class="btn-disabled" style="display:inline-block; padding: 1rem 3rem; border-radius: 50px; font-weight:bold; font-size:1.2rem; color:#fff;">
+                        受付終了
+                    </span>
+                    <a href="https://sushimasa.net/" class="btn-main-site">
+                        寿司正 公式サイトへ
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -190,8 +209,8 @@
     </footer>
 
     <!-- Fixed Bottom Button for Mobile -->
-    <a href="tel:0000000000" class="fixed-cta">
-        電話で予約する
+    <a href="https://sushimasa.net/" class="fixed-cta" style="background: var(--color-gold); color: #000;">
+        寿司正 公式サイトへ
     </a>
 
 </body>

@@ -358,3 +358,70 @@ a:hover {
     display: none; /* Hide top header on mobile if we have fixed CTA, or adjust */
   }
 }
+
+/* Closed State Styles */
+.btn-disabled {
+    background-color: #999 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.notice-closed {
+    background-color: #fce4e4;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.hero-closed-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-gold);
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-main-site {
+    display: inline-block;
+    background-color: var(--color-gold);
+    color: #000;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    text-shadow: none;
+    border: 2px solid var(--color-gold);
+}
+
+.btn-main-site:hover {
+    background-color: transparent;
+    color: var(--color-gold);
+    text-decoration: none;
+    opacity: 1;
+}
+
+.hero-closed-overlay .btn-main-site {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+.hero-closed-overlay .btn-main-site:hover {
+    background-color: transparent;
+    color: #fff;
+}
